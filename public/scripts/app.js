@@ -1,5 +1,7 @@
+console.log('app.js is not crazy')
+
 angular
-  .module('tunely', ['ngRoute'])
+  .module('keeping-time', ['ngRoute'])
   .config(config);
 
 config.$inject = ['$routeProvider', '$locationProvider'];

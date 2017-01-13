@@ -7,3 +7,12 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.side-nav {
+  background-color: rgba(229, 115, 115, .7);
+  color: white;
+}
+
+.subtitle {
+  vertical-align: text-bottom!important;
+}

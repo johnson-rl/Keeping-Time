@@ -5,7 +5,7 @@ var express = require('express');
 // generate a new express app and call it 'app'
 var app = express();
 var bodyParser = require('body-parser');
-var db = require('./models'),
+var db = require('./models');
 
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));

@@ -1,18 +1,13 @@
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
 .side-nav {
-  background-color: rgba(229, 115, 115, .7);
+  background-color: rgba(159, 177, 199, 1);
   color: white;
 }
 
 .subtitle {
   vertical-align: text-bottom!important;
+  margin-top: 0;
+}
+
+.changer {
+  background-color: #275F61;
 }

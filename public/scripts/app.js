@@ -13,8 +13,13 @@ function config ($routeProvider, $locationProvider) {
       controllerAs: 'homeCtrl',
       controller: 'HomeController'
     })
-    .when('/song', {
+    .when('/song/:song', {
       templateUrl: 'templates/song',
+      controllerAs: 'songCtrl',
+      controller: 'SongController'
+    })
+    .when('/genre/:genre', {
+      templateUrl: 'templates/home',
       controllerAs: 'songCtrl',
       controller: 'SongController'
     })

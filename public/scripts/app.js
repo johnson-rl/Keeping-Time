@@ -20,8 +20,8 @@ function config ($routeProvider, $locationProvider) {
     })
     .when('/genre/:genre', {
       templateUrl: 'templates/home',
-      controllerAs: 'songCtrl',
-      controller: 'SongController'
+      controllerAs: 'homeCtrl',
+      controller: 'HomeController'
     })
 
     $locationProvider.html5Mode({

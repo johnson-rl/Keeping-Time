@@ -25,7 +25,9 @@
   <div class="row"> -->
   <div class="col s8 offset-s2">
     <div class="row">
-      <kt-genre-card content="asdfsadf" path="/song/id" image="https://images-na.ssl-images-amazon.com/images/I/51slAqhhVPL.jpg"></kt-genre-card>
+      <div ng-repeat="card in homeCtrl.cards">
+        <kt-genre-card content="{{card.content}}" path="{{card.path}}" image="{{card.image}}"></kt-genre-card>
+      </div>
       <!-- <a class="col s12 m4 hoverable" ng-href="/song">
         <div class="card">
           <div class="card-image">

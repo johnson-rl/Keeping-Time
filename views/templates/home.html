@@ -7,7 +7,7 @@
       <br>
       <div class="col s6 offset-s3">
         <div class="input-field">
-          <input id="search" type="search" required>
+          <input id="search" type="search" required ng-model="homeCtrl.songSearch" ng-change="homeCtrl.spotifySearch()">
             <label for="search"><i class="material-icons">search</i>Search for your favorite song</label>
         </div>
       </div>

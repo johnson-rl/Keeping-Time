@@ -19,6 +19,8 @@ var cardChoices = [
     path: '/genre/Sad'
   }
 ]
+
+var recentlyFound = []
 // //Old Seed data
 // [{content: 'Fake Plastic Trees by Radiohead',
 //   image: 'https://images-na.ssl-images-amazon.com/images/I/51slAqhhVPL.jpg',
@@ -37,15 +39,14 @@ function HomeController ($http, $routeParams, $location){
   console.log('the home is out of control');
   vm = this;
   vm.cards = cardChoices
-  vm.spotify = []
   vm.songSearch = ''
+  vm.spotify = []
 
   vm.spotifySearch = function(){
     if (vm.songSearch){
     vm.searchString = encodeURIComponent(vm.songSearch)
     console.log('submitted', vm.searchString)
-    // console.log(path)
-    // $location.path('/genre/'+path)
+      recentlyFound = []
       spotify()
     } else{
       vm.cards = cardChoices
@@ -61,14 +62,20 @@ function HomeController ($http, $routeParams, $location){
       // console.log(json)
       json.data.tracks.items.forEach(function(track){
         var newTrack = {}
-        newTrack.uri = "https://embed.spotify.com/?uri="+track.uri;
+        // newTrack.uri = "https://embed.spotify.com/?uri="+track.uri;
+        newTrack.uri = track.uri;
+        newTrack.track = track.name;
+        newTrack.artist = track.artists[0].name;
         newTrack.content = track.name+' by '+track.artists[0].name;
         newTrack.image = track.album.images[0].url;
         newTrack.path = '/song/'+track.uri;
         vm.spotify.push(newTrack);
+        // var pushObject = {}
+        // pushObject[track.uri] = newTrack
+        recentlyFound.push(newTrack)
       })
       vm.cards = vm.spotify
-      console.log('songs',vm.spotify);
+      console.log('songs: ',vm.spotify,'all found: ',recentlyFound);
       vm.spotify = []
     });
   }

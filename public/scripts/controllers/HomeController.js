@@ -6,16 +6,28 @@ HomeController.$inject = ['$http', '$routeParams', '$location'];
 
 //Genres and Categories go here
 var cardChoices = [
+  // {content: 'Love',
+  //   image: 'https://ritexpress.files.wordpress.com/2013/12/music-love-heart-notes.jpg',
+  //   path: '/genre/Love'
+  // },{
+  //   content: 'Happy',
+  //   image: 'https://thirtyroses.files.wordpress.com/2014/08/music-makes-me-happy-by-plastickheart.jpg',
+  //   path: '/genre/Happy'
+  // },{
+  //   content: 'Sad',
+  //   image: 'https://miserableowlman.files.wordpress.com/2012/11/sad-music.jpg',
+  //   path: '/genre/Sad'
+  // },
   {content: 'Love',
-    image: 'https://ritexpress.files.wordpress.com/2013/12/music-love-heart-notes.jpg',
+    image: 'http://plusquotes.com/images/love-1.jpg',
     path: '/genre/Love'
   },{
     content: 'Happy',
-    image: 'https://thirtyroses.files.wordpress.com/2014/08/music-makes-me-happy-by-plastickheart.jpg',
+    image: 'http://cdn-img.health.com/sites/default/files/styles/400x400/public/migration/img/web/2016/0216/happy-advice-400x400.jpg?itok=44VwjUie',
     path: '/genre/Happy'
   },{
     content: 'Sad',
-    image: 'https://miserableowlman.files.wordpress.com/2012/11/sad-music.jpg',
+    image: 'http://cutewallpaper.org/wp-content/uploads/2015/12/Sad-Wallpaper-HD-1920x1080-3.jpg',
     path: '/genre/Sad'
   }
 ]

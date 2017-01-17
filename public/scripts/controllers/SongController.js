@@ -8,15 +8,17 @@ var translateQuery = 'https://translation.googleapis.com/language/translate/v2?t
 var trackID;
 var lyrics;
 
-SongController.$inject = ['$http', '$routeParams', '$location'];
+SongController.$inject = ['$http', '$routeParams', '$location', '$sce'];
 
-function SongController ($http, $routeParams, $location){
+function SongController ($http, $routeParams, $location, $sce){
   var vm = this
   // console.log(recentlyFound, $routeParams.song)
   vm.song = recentlyFound.filter(function(track){return track.uri===$routeParams.song})[0]
   // console.log(vm.song)
   vm.song.translation = []
   vm.song.vocab = []
+  vm.song.uri = $sce.trustAsResourceUrl('https://embed.spotify.com/?uri='+$routeParams.song)
+  console.log('song: ',vm.song.uri)
 
   $http({
     method: 'JSONP',
@@ -38,7 +40,7 @@ function SongController ($http, $routeParams, $location){
       if(lyric!==""){
         var splitLyric = lyric.split(' ')
         vm.song.vocab.push(splitLyric[Math.round(Math.random()*(splitLyric.length-1))])
-        console.log(lyric, 'vocab', vm.song.vocab)
+        // console.log(lyric, 'vocab', vm.song.vocab)
       }
       })
     })

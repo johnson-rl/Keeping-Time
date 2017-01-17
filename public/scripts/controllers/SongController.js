@@ -54,24 +54,3 @@ function SongController ($http, $routeParams, $location, $sce){
     })
   }
 }
-
-//these are the key value pairs in vm.song
-// newTrack.uri = track.uri;
-// newTrack.track = track.name;
-// newTrack.artist = track.artists[0].name;
-// newTrack.content = track.name+' by '+track.artists[0].name;
-// newTrack.image = track.album.images[0].url;
-// newTrack.path = '/song/'+track.uri;
-
-// {
-  // "message": {
-  //   "header": {
-  //     "status_code": 200,
-  //     "execute_time": 0.028121948242188,
-  //     "available": 10000
-  //   },
-  //   "body": {
-  //     "track_list": [
-  //       {
-  //         "track": {
-  //           "track_id": 70940791,

@@ -1,72 +1,16 @@
-<!-- <div class="valign-wrapper">
-  <div class="valign">
-  </div>
-</div> -->
-    <div class="row">
-      <br>
-      <div class="col s6 offset-s3">
-        <div class="input-field">
-          <input id="search" type="search" required ng-model="homeCtrl.songSearch" ng-change="homeCtrl.spotifySearch()">
-            <label for="search"><i class="material-icons">search</i>Search for your favorite song</label>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="row">
-      <div class="row center-align">
-        <a href="/song" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">library_music</i></a>
-        <a href="/song" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">loyalty</i></a>
-      </div>
-      <div class="row center-align">
-        <a href="/song" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">visibility</i></a>
-        <a href="/song" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">volume_up</i></a>
-      </div>
-    </div>
-  <div class="row"> -->
+<div class="row">
+  <br>
   <div class="col s6 offset-s3">
-    <div class="row">
-      <div ng-repeat="card in homeCtrl.cards">
-        <kt-genre-card content="{{card.content}}" path="{{card.path}}" image="{{card.image}}"></kt-genre-card>
-      </div>
-      <!-- <a class="col s12 m4 hoverable" ng-href="/song">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/51slAqhhVPL.jpg">
-          </div>
-          <div class="card-content">
-            <p>Fake Plastic Trees by Radiohead</p>
-          </div>
-        </div>
-      </a>
-      <a class="col s12 m4 hoverable" ng-href="/song">
-        <div class="card">
-          <div class="card-image">
-            <img src="http://product-images.highwire.com/9990961/bring-me-the-horizon-sempiternal-magnet.jpg">
-          </div>
-          <div class="card-content">
-            <p>Empire by Bring me the Horizon</p>
-          </div>
-        </div>
-      </a>
-      <a class="col s12 m4 hoverable" ng-href="/song">
-        <div class="card">
-          <div class="card-image">
-            <img src="http://nerdist.com/wp-content/uploads/2015/07/Wilco-Yankee-Hotel-Foxtrot-07232015.jpg">
-          </div>
-          <div class="card-content">
-            <p>Misunderstood by Wilco</p>
-          </div>
-        </div>
-      </a> -->
+    <div class="input-field">
+      <input id="search" type="search" required ng-model="homeCtrl.songSearch" ng-change="homeCtrl.spotifySearch()">
+        <label for="search"><i class="material-icons">search</i>Search for your favorite song</label>
     </div>
-    <!-- <div class="fixed-action-btn horizontal">
-      <a class="btn-floating btn-large red">
-        <i class="large material-icons">mode_edit</i>
-      </a>
-      <ul>
-        <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-      </ul>
-    </div> -->
   </div>
+</div>
+<div class="col s6 offset-s3">
+  <div class="row">
+    <div ng-repeat="card in homeCtrl.cards">
+      <kt-genre-card content="{{card.content}}" path="{{card.path}}" image="{{card.image}}"></kt-genre-card>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,7 @@ function SongController ($http, $routeParams, $location){
   vm.song = recentlyFound.filter(function(track){return track.uri===$routeParams.song})[0]
   // console.log(vm.song)
   vm.song.translation = []
+  vm.song.vocab = []
 
   $http({
     method: 'JSONP',
@@ -34,6 +35,11 @@ function SongController ($http, $routeParams, $location){
       vm.song.lyrics = json.data.message.body.lyrics.lyrics_body.split('\n').slice(0,-3)
       vm.song.lyrics.forEach(function(lyric){
       vm.translateLyrics(lyric)
+      if(lyric!==""){
+        var splitLyric = lyric.split(' ')
+        vm.song.vocab.push(splitLyric[Math.round(Math.random()*(splitLyric.length-1))])
+        console.log(lyric, 'vocab', vm.song.vocab)
+      }
       })
     })
   }

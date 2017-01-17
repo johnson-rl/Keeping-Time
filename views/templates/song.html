@@ -22,17 +22,17 @@
        <div class="col s12 center">
          <h5>Vocabulary</h5>
          <br>
-         <ul>
-           <li>Lorem</li>
-           <li>Ipsum</li>
+         <div ng-repeat="word in songCtrl.song.vocab track by $index">
+           <p>{{word}}</p>
+           <!-- <li>Ipsum</li>
            <li>Secundum</li>
            <li>Flatulum</li>
            <li>Datum</li>
            <li>Um</li>
            <li>Drum</li>
            <li>Tums</li>
-           <li>Scum</li>
-         </ul>
+           <li>Scum</li> -->
+         </div>
          <div class="input-field song-page-search">
            <input id="dictionary" type="search" required>
              <label for="dictionary"><i class="material-icons">search</i>Dictionary</label>

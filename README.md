@@ -17,6 +17,7 @@ The user will be able to
 * Test their knowledge of newly learned voacb words by entering them in input boxes in the lyrics
 * Look up the definition and translation of all vocab words by clicking on them
 * Look up the definition and translation of any word by searching for it
+* Access multiple languages instead of just English and French
 
 ##Technologies Used
 ####Languages:
@@ -28,7 +29,7 @@ Express, Angular
 
 
 ### Screen Shots
-<img src="" width="600">
-<img src="" width="600">
+<img src="https://i.imgur.com/iV4dlGK.png" width="600">
+<img src="https://i.imgur.com/pYhFtd1.png" width="600">
 
 ### Contributors
